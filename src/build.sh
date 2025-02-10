@@ -303,6 +303,7 @@ function build_gdb() {
                  "--with-gmp=$libgmp_prefix" \
                  "--with-mpfr=$libmpfr_prefix" \
                  "CC=$CC" "CXX=$CXX" "--host=$HOST" \
+                 --with-python \
                  "CFLAGS=$CFLAGS" "CXXFLAGS=$CXXFLAGS" 1>&2
     if [[ $? -ne 0 ]]; then
         return 1
